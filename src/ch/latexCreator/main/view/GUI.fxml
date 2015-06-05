@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="672.0" maxWidth="634.0" minHeight="672.0"
+	minWidth="634.0" prefHeight="672.0" prefWidth="634.0"
+	xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="ch.latexCreator.main.view.GUIController">
+	<children>
+		<Label layoutX="19.0" layoutY="30.0" text="Filename"
+			AnchorPane.leftAnchor="19.0" AnchorPane.topAnchor="30.0" />
+		<Label layoutX="22.0" layoutY="68.0" text="Title"
+			AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="68.0" />
+		<Label layoutX="20.0" layoutY="105.0" text="Author"
+			AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="105.0" />
+		<Label layoutX="14.0" layoutY="180.0" prefHeight="26.0"
+			prefWidth="80.0" text="Add Sections" textAlignment="CENTER"
+			AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="145.0" />
+		<TextField fx:id="fileName" layoutX="114.0" layoutY="25.0"
+			prefHeight="23.0" prefWidth="190.0" AnchorPane.leftAnchor="110.0"
+			AnchorPane.topAnchor="25.0" />
+		<TextField fx:id="title" layoutX="110.0" layoutY="63.0"
+			prefHeight="23.0" prefWidth="504.0" AnchorPane.leftAnchor="110.0"
+			AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="63.0" />
+		<TextField fx:id="author" layoutX="128.0" layoutY="85.0"
+			prefHeight="23.0" prefWidth="444.0" AnchorPane.leftAnchor="110.0"
+			AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" />
+		<Label layoutX="312.0" layoutY="30.0" text=".tex" />
+		<Button layoutX="527.0" layoutY="22.0" mnemonicParsing="false"
+			onAction="#handleCreate" onMouseClicked="#handleCreate" prefHeight="32.0"
+			prefWidth="89.0" text="Creat New" AnchorPane.rightAnchor="20.0" />
+		<ButtonBar layoutX="134.0" layoutY="275.0" minHeight="-Infinity"
+			prefHeight="59.0" prefWidth="445.0" AnchorPane.leftAnchor="134.0"
+			AnchorPane.rightAnchor="21.0" />
+		<Button fx:id="abstructButton" disable="true" layoutX="118.0"
+			layoutY="138.0" mnemonicParsing="false" onMouseClicked="#addAbstract"
+			prefHeight="41.0" prefWidth="115.0" text="ABSTRACT"
+			AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="138.0" />
+		<Button fx:id="sectionButton" disable="true" layoutX="237.0"
+			layoutY="138.0" mnemonicParsing="false" onMouseClicked="#addSection"
+			prefHeight="41.0" prefWidth="115.0" text="SECTION"
+			AnchorPane.topAnchor="138.0" />
+		<Button fx:id="imageButton" disable="true" layoutX="366.0"
+			layoutY="138.0" mnemonicParsing="false" onMouseClicked="#addImage"
+			prefHeight="41.0" prefWidth="115.0" text="IMAGE"
+			AnchorPane.topAnchor="138.0" />
+		<Button fx:id="bibButton" disable="true" layoutX="507.0"
+			layoutY="138.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+			minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#addBib"
+			prefHeight="41.0" prefWidth="115.0" text="BIBLIOGRAPHY"
+			AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="138.0" />
+		<Label layoutX="20.0" layoutY="244.0" text="Section Name"
+			AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="195.0" />
+		<TextField fx:id="sectionName" disable="true" layoutX="124.0"
+			layoutY="190.0" prefHeight="23.0" prefWidth="444.0"
+			AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="20.0"
+			AnchorPane.topAnchor="190.0" />
+		<TextArea fx:id="sectionContent" disable="true" layoutX="31.0"
+			layoutY="298.0" prefHeight="195.0" prefWidth="578.0"
+			AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
+			AnchorPane.topAnchor="230.0" />
+		<Button fx:id="saveSecButton" disable="true" layoutX="508.0"
+			layoutY="490.0" mnemonicParsing="false" onMouseClicked="#appendSection"
+			prefHeight="36.0" prefWidth="102.0" text="Save Section"
+			AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="435.0" />
+		<Label layoutX="20.0" layoutY="437.0" text="Add Bibliography Entry"
+			AnchorPane.leftAnchor="20.0" />
+		<Label layoutX="14.0" layoutY="508.0" text="Author"
+			AnchorPane.bottomAnchor="148.0" AnchorPane.leftAnchor="20.0" />
+		<Label layoutX="20.0" layoutY="537.0" text="Title"
+			AnchorPane.bottomAnchor="119.0" AnchorPane.leftAnchor="20.0" />
+		<Label layoutX="20.0" layoutY="567.0" text="Year"
+			AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="20.0" />
+		<Label layoutX="26.0" layoutY="479.0" text="ID"
+			AnchorPane.bottomAnchor="177.0" AnchorPane.leftAnchor="20.0" />
+		<Label layoutX="20.0" layoutY="594.0" prefHeight="16.0"
+			prefWidth="68.0" text="Publisher" AnchorPane.leftAnchor="20.0" />
+		<Label layoutX="21.0" layoutY="622.0" text="URL"
+			AnchorPane.leftAnchor="20.0" />
+
+		<TextField fx:id="bID" disable="true" layoutX="110.0"
+			layoutY="474.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="300.0" />
+		<TextField fx:id="bAuthor" disable="true" layoutX="110.0"
+			layoutY="503.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="300.0" />
+		<TextField fx:id="bTitle" disable="true" layoutX="110.0"
+			layoutY="532.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="300.0" />
+		<TextField fx:id="bYear" disable="true" layoutX="110.0"
+			layoutY="562.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="300.0" />
+		<TextField fx:id="bPub" disable="true" layoutX="110.0"
+			layoutY="591.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="300.0" />
+		<TextField fx:id="bURL" disable="true" layoutX="110.0"
+			layoutY="620.0" AnchorPane.leftAnchor="110.0" AnchorPane.rightAnchor="300.0" />
+
+		<Button fx:id="saveEntryButton" disable="true" layoutX="251.0"
+			layoutY="435.0" mnemonicParsing="false" onMouseClicked="#appendBib"
+			text="Save Entry" />
+		<Button fx:id="disTexButton" disable="true" layoutX="445.0"
+			layoutY="509.0" mnemonicParsing="false" onMouseClicked="#deleteTex"
+			prefHeight="60.0" prefWidth="169.0" text="DISCARD DOCUMENT" textFill="#ae0909"
+			AnchorPane.rightAnchor="20.0" />
+		<Button fx:id="saveTexButton" disable="true" layoutX="445.0"
+			layoutY="589.0" mnemonicParsing="false" onMouseClicked="#finishTex"
+			prefHeight="56.0" prefWidth="169.0" text="SAVE TEX FILE" textFill="#09751b"
+			AnchorPane.rightAnchor="20.0" />
+	</children>
+</AnchorPane>
